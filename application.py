@@ -3,12 +3,10 @@ import random
 import requests
 
 from flask import Flask, session, render_template, request, redirect, url_for, g
-from flask_login import LoginManager, UserMixin, login_user, logout_user, current_user
 from markupsafe import escape
 from flask_session.__init__ import Session
 from sqlalchemy import create_engine, exists
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length
 from functools import wraps
