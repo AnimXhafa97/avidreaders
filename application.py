@@ -7,8 +7,6 @@ from markupsafe import escape
 from flask_session.__init__ import Session
 from sqlalchemy import create_engine, exists
 from sqlalchemy.orm import scoped_session, sessionmaker
-from wtforms import StringField, PasswordField, BooleanField
-from wtforms.validators import InputRequired, Email, Length
 from functools import wraps
 
 app = Flask(__name__)
