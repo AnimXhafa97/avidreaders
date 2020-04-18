@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+  {% block body %}
+
+  <body id="home">
+    <div class="topnav">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('books') }}">Books</a>
+      <a href="{{ url_for('login') }}">Login</a>
+    </div>
+
+    <div class="bg-text">
+      <h1>"Today a reader. Tomorrow a leader."</h1>
+      <h4>-Margaret Fuller</h4>
+      <a href="/login/"><button class="btn success" type="button" name="login">Login</button></a>
+      <a href="/register/"><button class="btn success" type="button" name="register" >Register</button></a>
+    </div>
+
+  </body>
+
+  {% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}results{% endblock %}
+
+
+{% block body %}
+<body id="results">
+
+</body>
+
+<div class="container">
+      {% for item in get_search %}
+
+      <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">by {{ item.author }}</p>
+        <p><a href= "reviews/{{item.id}}">Leave a review</a></p>
+      </div>
+    </div>
+        {% endfor %}
+
+
+
+</div>
+
+{% endblock %}

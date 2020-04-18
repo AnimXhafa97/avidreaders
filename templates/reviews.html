@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+
+
+
+
+{% block body %}
+
+<body id="reviews">
+
+
+  <div class="topnav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('books') }}">Books</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron">
+  <h1>{{ get_search.title }}</h1>
+  <h5>by: {{ get_search.author }}</h5>
+  <p>Goodreads rating: <strong>{{ rating }}</strong></p>
+</div>
+
+
+
+
+<div class="container">
+  <form action="{{ url_for('reviews', id=id)}}" method="post">
+    <h5>Leave a review:</h5>
+
+    <h4>{{ message }}</h4>
+    <!-- <p>Review: {{ written }}</p>
+    <p>Rating: {{ ratings }}</p> -->
+
+    <div class="container" id="user_reviews">
+{% for item in get_reviews %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title"><span class="badge badge-info">{{ item.usernames }}</span>
+    {% if item.rating == 5 %}
+      <span class="badge badge-success float-right">rated {{item.rating}}</span>
+    {% elif item.rating == 4 or item.rating == 3 %}
+      <span class="badge badge-warning float-right">rated {{item.rating}}</span>
+    {% elif item.rating == 2 or item.rating == 1 %}
+      <span class="badge badge-danger float-right">rated {{item.rating}}</span>
+    {% endif %}
+  </h5>
+  <p class="card-text mt-3 alert alert-info">{{item.written}}</p>
+</div>
+</div>
+{% endfor %}
+
+
+      <div class="row">
+        <div class="col-75">
+            <input type="radio" name="rating" value="5" >
+              <label for="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span></label><br>
+
+            <input type="radio" name="rating" value="4">
+              <label for="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </label><br>
+
+            <input type="radio" name="rating" value="3">
+              <label for="rating">
+
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+
+              </label><br>
+
+            <input type="radio" name="rating" value="2">
+              <label for="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+
+              </label><br>
+
+            <input type="radio" name="rating" value="1">
+              <label for="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+
+              </label><br>
+          </div>
+
+          <textarea name="user_review" placeholder="Review the book" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Post">
+      </div>
+    </form>
+    </div>
+
+  </body>
+</div>
+
+
+{% endblock %}

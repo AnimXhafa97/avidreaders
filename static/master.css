@@ -1,0 +1,450 @@
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container-login {
+  padding: 16px;
+  max-width: 40%;
+  margin: auto;
+  margin-top: 4%;
+  border: 1px solid black
+}
+
+
+/* Full-width input fields */
+#home input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#login input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#register input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#login h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 1.65em;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+#register label {
+
+  font-size: 1.75em;
+}
+
+#register form {
+
+  margin: 20px 20px 20px 20px;
+}
+
+#home {
+  height: 100%;
+  background-image: url("/static/books.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#login label {
+
+  font-size: 2em;
+}
+
+#loginbutton {
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 5px;
+
+}
+
+#loginbutton:hover {
+
+  background-color: green;
+  cursor: pointer;
+
+}
+
+#results .container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+#results .card-title {
+
+  font-size: 1.75em;
+}
+
+#results .card-text {
+
+  font-size: 1.25em;
+}
+
+#results .card {
+
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#welcome {
+  height: 100%;
+  background-image: url("/static/books.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#welcome .jumbotron {
+  margin-top: 25px;
+}
+
+#books {
+  background-color: #dcf7f1;
+
+}
+
+#results {
+  background-color: #dcf7f1;
+
+}
+
+#login input {
+
+}
+
+#books h1 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid white; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+  opacity: 1.0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  background-color: #d2d6d5;
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+#books h4 {
+
+  padding-top: 40px;
+  margin-bottom: 10px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("static/books.jpg")
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+#register .btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 12px;
+
+}
+
+#login .btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 12px;
+
+}
+
+/* Green */
+.success {
+  border-color: #4CAF50;
+  color: green;
+  margin: 10px 10px 10px 10px
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.info {
+
+  border-color: #4CAF50;
+  color: green;
+  margin: 10px 10px 10px 10px
+}
+
+.info:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+#reviews input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the submit button */
+#reviews input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the container */
+#reviews .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  align-items: center;
+}
+
+/* Floating column for labels: 25% width */
+#reviews .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+#reviews .jumbotron {
+  background-color: #b4f2ac;
+  border: 2px solid green;
+}
+
+/* Floating column for inputs: 75% width */
+#reviews .col-75 {
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+#reviews .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+#reviews @media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#welcome .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.checked {
+  color: orange;
+}
+
+#welcome .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#welcome .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#welcome .button:hover span {
+  padding-right: 25px;
+}
+
+#welcome .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

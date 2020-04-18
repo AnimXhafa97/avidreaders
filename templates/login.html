@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+  {% block body %}
+
+  <body id="login">
+
+    <div class="topnav">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('books') }}">Books</a>
+      <a href="{{ url_for('login') }}">Login</a>
+    </div>
+
+
+<h3>{{ message }}</h3>
+<div class="container-login">
+    <form class="login-form" method="post" action="{{ url_for('login') }}">
+      <label for="username"><p>Enter your username:</p></label>
+          <input type="text" placeholder="username" name="username" required>
+      <label for="password"><p>Enter your password:</p></label>
+          <input type="password" placeholder="password" name="password" required>
+      <button type="submit" id="loginbutton">Login</button>
+    </form>
+
+
+
+</div>
+  </body>
+  {% endblock %}

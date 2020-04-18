@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<body id="books">
+
+  <div class="topnav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('books') }}">Books</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+
+<div class="container">
+  <h1>Let's find your next perfect read!</h1>
+
+<form action="{{ url_for('results') }}" method="post">
+  <input name="search" type="search" id="myInput" placeholder="Search for a book title or author...">
+<button type="btn btn-primary" type="submit">Search</button>
+</form>
+<h2>{{user_title}}</h2>
+<h4>Some recommendations: </h4>
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:40%;">Title</th>
+      <th style="width:40%;">Author</th>
+      <th style="width:20%">Rating</th>
+      {% for i in range(10) %}
+      <tr>
+        <td>{{ titles[i] }}</td>
+        <!-- <td>{{ authors }}</td> -->
+        <td>{{ authors[i] }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>
+</body>
+
+
+
+
+{% endblock %}

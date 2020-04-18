@@ -1,0 +1,21 @@
+CREATE TABLE avidreaders (
+  user_id SERIAL PRIMARY KEY,
+  usernames VARCHAR UNIQUE NOT NULL,
+  passwords VARCHAR UNIQUE NOT NULL
+);
+
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  isbn VARCHAR NOT NULL,
+  title VARCHAR NOT NULL,
+  author VARCHAR NOT NULL,
+  year INTEGER NOT NULL
+);
+
+CREATE TABLE reviews (
+  review_id SERIAL PRIMARY KEY,
+  u_id INTEGER REFERENCES avidreaders,
+  r_book_id INTEGER REFERENCES books,
+  rating INTEGER NOT NULL,
+  written VARCHAR NOT NULL
+);

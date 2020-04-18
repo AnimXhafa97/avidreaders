@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<div class="topnav">
+  <a class="active" href="{{ url_for('index') }}">Home</a>
+  <a href="{{ url_for('books') }}">Books</a>
+</div>
+
+
+<h1>Hello {{username}}!!</h1>
+
+{% endblock %}
