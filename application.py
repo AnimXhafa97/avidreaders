@@ -92,6 +92,7 @@ def login():
         message = "Incorrect username or password"
         return render_template("welcome.html", username = session["username"])
 
+
 @app.route("/logout/")
 @login_required
 def logout():
